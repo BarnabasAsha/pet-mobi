@@ -1,0 +1,58 @@
+@import "./mixins";
+
+.featured {
+  width: 100%;
+  margin-top: 100px;
+  @include flex($direction: column);
+
+  h2 {
+    @include heading {
+      font-size: 40px;
+      line-height: 64px;
+      text-align: center;
+    }
+    margin-bottom: 32px;
+  }
+
+  &_grid {
+    @include flex($justify: space-between);
+    width: 100%;
+    max-width: 700px;
+
+    div {
+      width: 133px;
+    }
+  }
+
+  &_gif {
+    width: 100%;
+    margin-top: 73px;
+    margin-bottom: 44px;
+  }
+
+  &_details {
+    @include flex($justify: space-between);
+    width: 100%;
+    max-width: 1000px;
+
+    &_item {
+      @include flex($direction: column, $align: flex-start);
+
+      .count {
+        @include heading {
+          color: $secondary-color;
+          font-size: 32px;
+          line-height: 64px;          
+        }
+      }
+
+      .title {
+        font-family: 'PP Agrandir Regular', sans-serif;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 32px;
+        color: $dark-color-2;
+      }
+    }
+  }
+}

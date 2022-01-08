@@ -1,0 +1,27 @@
+@import "./mixins";
+
+.flex_wrapper {
+  margin-top: 100px;
+  width: 100%;
+}
+
+.flex_content {
+  width: 100%;
+  @include flex($justify: space-between);
+
+  .flex_content_text {
+  margin-left: 5%;
+
+    h3 {
+      @include heading {
+        font-size: 32px;
+        line-height: 64px; 
+      }
+    }
+
+    p {
+      @include text;
+      max-width: 388px;
+    }
+  }
+}

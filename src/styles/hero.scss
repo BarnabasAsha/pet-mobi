@@ -1,0 +1,36 @@
+@import "./mixins";
+
+.hero {
+  width: 100%;
+  margin-top: 10%;
+
+  &_content {
+    @include flex($direction: column);
+    padding: 1.5em;
+    margin-bottom: 3.5em;
+
+    h1 {
+      @include heading{
+        font-size: 56px;
+        line-height: 64px;
+      }
+      max-width: 979px;
+      margin-bottom: 16px;
+    }
+
+    p {
+      @include text($hero:true);
+      max-width: 783px;
+      text-align: center
+    }
+
+    &_btn {
+      @include btn(true);
+      margin-top: 32px;
+    }
+  }
+
+  .hero_img {
+    width: 100%;
+  }
+}

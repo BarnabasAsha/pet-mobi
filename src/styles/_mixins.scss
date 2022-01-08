@@ -1,0 +1,70 @@
+
+$primary-color: #FAEEDA;
+$secondary-color: #00AD9E;
+$dark-color: #232323;
+$dark-color-2: #3E302D;
+
+@mixin flex($justify:center, $align:center, $direction:row ) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+
+@mixin heading {
+    font-family: 'PP Agrandir ExtraBold', sans-serif;
+    font-weight: 800;
+    color: $dark-color;
+    @content;
+}
+
+@mixin text ($hero:false) {
+  font-family: 'Kodchasan', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  color: $dark-color-2;
+
+  @if $hero {
+    font-size: 1rem;
+    color: $dark-color;
+  }
+}
+
+@mixin link($large:false) {
+  font-family: 'PP Agrandir Bold', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;  
+  color: $dark-color-2;
+
+  @if large {
+    font-size: 20px;
+    line-height: 32px;
+    text-transform: capitalize;
+    color: $dark-color;
+  }
+}
+
+@mixin btn($large) {
+  width: 176px;
+  height: 56px;
+  background: $secondary-color;
+  box-shadow: 0px 4px 10px rgba(3, 44, 40, 0.1);
+  border-radius: 40px;
+  @include flex;
+  font-family: 'PP Agrandir Bold', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 32px; 
+  color: #FAEEDA; 
+  border: none;
+  outline: none;
+
+  @if $large {
+    width: 216px;
+  }
+}

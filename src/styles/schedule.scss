@@ -1,0 +1,27 @@
+@import "./mixins";
+
+.schedule {
+  margin-top: 116px;
+  width: 100%;
+  @include flex($direction: column);
+
+  h2 {
+    @include heading {
+      font-size: 40px;
+      line-height: 48px;
+      text-align: center;
+    }
+  }
+
+  p {
+    max-width: 388px;
+    @include text;
+    text-align: center;
+    margin-top: 16px;
+  }
+
+  &_img {
+    width: 542px;
+    margin-top: 56px;
+  }
+}

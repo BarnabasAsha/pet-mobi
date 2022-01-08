@@ -1,0 +1,44 @@
+@import "./mixins";
+
+@import url('https://fonts.cdnfonts.com/css/kodchasan-2');
+
+@font-face {
+  font-family: 'PP Agrandir Bold';
+  src: url("../assets/fonts/Agrandir-TextBold.otf");
+}
+
+@font-face {
+  font-family: 'PP Agrandir ExtraBold';
+  src: url("../assets/fonts/Agrandir-GrandHeavy.otf");
+}
+
+@font-face {
+  font-family: 'PP Agrandir Regular';
+  src: url("../assets/fonts/Agrandir-Regular.otf");
+}
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0
+}
+
+body {
+  background: $primary-color;
+  color: $dark-color-2;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
