@@ -5,6 +5,10 @@
   margin-top: 100px;
   position: relative;
 
+  @include mobile {
+    padding: 1em;
+  }
+
   h2 {
     @include heading {
       font-size: 3rem;
@@ -127,7 +131,7 @@
     }
 
     @include mobile {
-      right: 10px;
+      right: 15px;
       top: 50%;
     }
 
