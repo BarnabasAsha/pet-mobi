@@ -7,6 +7,8 @@
     <Schedule />
     <Testimonials />
     <Doggies />
+    <Download />
+    <Footer />
   </main>
 </template>
 
@@ -18,6 +20,8 @@ import Schedule from "./components/Schedule.vue";
 import FlexWrapper from "./components/FlexWrapper.vue";
 import Testimonials from "./components/Testimonials.vue";
 import Doggies from "./components/Doggies.vue";
+import Download from "./components/Download.vue";
+import Footer from "./components/Footer/Footer.vue";
 
 export default {
   name: "App",
@@ -29,6 +33,8 @@ export default {
     FlexWrapper,
     Testimonials,
     Doggies,
+    Download,
+    Footer,
   },
 };
 </script>
