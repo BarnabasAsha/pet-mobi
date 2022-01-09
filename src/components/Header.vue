@@ -14,13 +14,33 @@
           <a href="">Download App</a>
         </div>
       </nav>
+      <button
+        @click="() => (status = !status)"
+        class="header_menu"
+        :class="status ? 'active' : ''"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
   </header>
+  <MobileNav v-if="status" />
 </template>
 
 <script>
+import MobileNav from "./MobileNav.vue";
+import { ref } from "vue";
+
 export default {
   name: "Header",
+  components: {
+    MobileNav,
+  },
+  setup() {
+    const status = ref(false);
+    return { status };
+  },
 };
 </script>
 

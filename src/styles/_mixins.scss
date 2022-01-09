@@ -4,11 +4,12 @@ $secondary-color: #00AD9E;
 $dark-color: #232323;
 $dark-color-2: #3E302D;
 
-@mixin flex($justify:center, $align:center, $direction:row ) {
+@mixin flex($justify:center, $align:center, $direction:row, $wrap: wrap ) {
   display: flex;
   justify-content: $justify;
   align-items: $align;
   flex-direction: $direction;
+  flex-wrap: $wrap;
 }
 
 @mixin heading {
@@ -22,9 +23,14 @@ $dark-color-2: #3E302D;
   font-family: 'Kodchasan', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
   color: $dark-color-2;
+
+  @include mobile {
+    font-size: 1rem;
+    line-height: 1.4rem;
+  }
 
   @if $hero {
     font-size: 1rem;
@@ -63,6 +69,12 @@ $dark-color-2: #3E302D;
   color: #FAEEDA; 
   border: none;
   outline: none;
+  
+  a {
+    width: 100%;
+    height: 100%;
+    @include flex;
+  }
 
   @if $large {
     width: 216px;
@@ -76,7 +88,8 @@ $dark-color-2: #3E302D;
 }
 
 @mixin ipad {
-  @media (max-width: 1000px) {
+  @media (max-width: 1200px) {
     @content;
   }
 }
+

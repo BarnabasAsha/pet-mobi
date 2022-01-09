@@ -5,9 +5,9 @@
       <div class="testimony_content">
         <h3>Kassim, 23</h3>
         <p>
-          <span>"</span>Pet Mobi makes caring for me to give premium care to my
-          Miju when i’m away. The caregivers have been amazing for her as they
-          are caring and make her feel safe.<span>"</span>
+          <span>&ldquo; </span>Pet Mobi makes caring for me to give premium care
+          to my Miju when i’m away. The caregivers have been amazing for her as
+          they are caring and make her feel safe.<span> &bdquo;</span>
         </p>
       </div>
       <div class="testimony_img">
@@ -15,6 +15,10 @@
         <div class="yellow"></div>
         <div class="red"></div>
       </div>
+    </div>
+    <div class="testimonials_controls">
+      <button class="active control"></button><button class="control"></button
+      ><button class="control"></button><button class="control"></button>
     </div>
   </div>
 </template>

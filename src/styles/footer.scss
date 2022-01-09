@@ -8,7 +8,11 @@
   margin-top: 160px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between
+  justify-content: space-between;
+
+  @include mobile {
+    margin-top: 70px;
+  }
 }
 
 .footer_item {

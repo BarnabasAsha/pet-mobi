@@ -9,19 +9,43 @@
   width: 100%;
   @include flex($justify: space-between);
 
+  @include mobile {
+    margin-bottom: 1.5em;
+  }
+
   .flex_content_text {
   margin-left: 5%;
 
+  @include mobile {
+    margin: 0;
+    padding: 1em;
+  }
+
     h3 {
       @include heading {
-        font-size: 32px;
-        line-height: 64px; 
+        font-size: 2rem;
+        line-height: 4rem; 
+
+        @include mobile {
+          font-size: 1.5rem;
+          line-height: 3rem;
+        }
       }
     }
 
     p {
       @include text;
       max-width: 388px;
+    }
+  }
+
+  &_img {
+    @include ipad {
+      width: 300px;
+    }
+
+    @include mobile {
+      width: auto;
     }
   }
 }
